@@ -1,3 +1,8 @@
+const pictureLinks = [
+    "images/JoeBiden_hidden.png",
+    "images/ChrisHibble_hidden.png",
+    "images/Dominos_hidden.png"
+]
 const targetWords = ["america", "google", "bread"]
 const dictionary = 
 [
@@ -25,11 +30,18 @@ const dictionary =
 "america"
 ]
 
+const rand = Math.floor(Math.random(pictureLinks.length))
+const img = document.createElement("img")
+img.src = pictureLinks[rand]
+var block = document.getElementById("pic")
+block.appendChild(img)
+
+
+const targetWord = targetWords[rand]
+const WORD_LENGTH = targetWords[rand].length
 const guessGrid = document.querySelector("[data-guess-grid")
 const keyboard = document.querySelector("[data-keyboard")
 const alertContainer = document.querySelector("[data-alert-container")
-const WORD_LENGTH = 7
-const targetWord = targetWords[0]
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 
@@ -59,7 +71,7 @@ function handleMouseClick(e) {
         return
     }
 
-    if (e.target.matches("[data-delete"))
+    if (e.target.matches("[data-delete]"))
     {
         deleteKey()
         return
@@ -196,9 +208,26 @@ function checkWinLose(guess, tiles){
         showAlert("You Win", 5000)
         danceTiles(tiles)
         stopInteraction
-        return
+        return        
     }
-    
+    else
+    {
+        stopInteraction()        
+        resetGrid()
+        return    
+    }
+}
+
+function resetGrid()
+{
+    console.log(getActiveTiles)
+    const tiles = getActiveTiles()
+    tiles.forEach((tile) => {
+        tile.textContent = ""
+        delete tile.dataset.state
+        delete tile.dataset.letter
+    });
+    startInteraction()
 }
 
 function danceTiles(tiles){
