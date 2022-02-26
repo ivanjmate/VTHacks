@@ -4,9 +4,70 @@ const pictureLinks = [
     "images/Dominos_hidden.png"
 ]
 const targetWords = ["america", "google", "bread"]
-const dictionary = 
+const dictionary_array = 
+[[], [], [], [], 
 [
-"ability",
+    "Abuse",
+    "Adult",
+    "Agent",
+    "Anger",
+    "Apple",
+    "Award",
+    "Basis",
+    "Beach",
+    "Birth",
+    "Block",
+    "Blood",
+    "Board",
+    "Brain",
+    "Bread",
+    "Break",
+    "Brown",
+    "Buyer",
+    "Cause",
+    "Chain",
+    "Chair",
+    "Chest",
+    "Chief",
+    "Child",
+    "Bread"
+], 
+[
+"Better",
+"Beyond",
+"Bishop",
+"Border",
+"Bottle",
+"Bottom",
+"Bought",
+"Branch",
+"Breath",
+"Bridge",
+"Bright",
+"Broken",
+"Budget",
+"Burden",
+"Bureau",
+"Button",
+"Camera",
+"Cancer",
+"Cannot",
+"Carbon",
+"Career",
+"Castle",
+"Casual",
+"Caught",
+"Center",
+"Centre",
+"Chance",
+"Change",
+"Charge",
+"Choice",
+"Choose",
+"Chosen",
+"Google"
+], 
+["ability",
 "absence",
 "academy",
 "account",
@@ -19,7 +80,6 @@ const dictionary =
 "advised",
 "adviser",
 "against",
-"agility",
 "airline",
 "airport",
 "alcohol",
@@ -28,10 +88,11 @@ const dictionary =
 "analyst",
 "ancient",
 "another",
-"america"
+"america"]
 ]
 
-const rand = Math.floor(Math.random(pictureLinks.length))
+const rand = Math.floor(Math.random() * pictureLinks.length)
+console.log("" + rand)
 const img = document.createElement("img")
 img.src = pictureLinks[rand]
 var block = document.getElementById("pic")
@@ -40,6 +101,8 @@ block.appendChild(img)
 
 const targetWord = targetWords[rand]
 const WORD_LENGTH = targetWords[rand].length
+const dictionary = dictionary_array[WORD_LENGTH - 1]
+
 const guessGrid = document.querySelector("[data-guess-grid")
 const keyboard = document.querySelector("[data-keyboard")
 const alertContainer = document.querySelector("[data-alert-container")
