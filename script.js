@@ -31,6 +31,7 @@ const alertContainer = document.querySelector("[data-alert-container")
 const WORD_LENGTH = 7
 const targetWord = targetWords[0]
 const FLIP_ANIMATION_DURATION = 500
+const DANCE_ANIMATION_DURATION = 500
 
 startInteraction();
 
@@ -145,10 +146,10 @@ function flipTiles(tile, index, array, guess){
         if (index === array.length -1){
             tile.addEventListener("transitionend", () =>{
                 startInteraction()
-                //checkWinLose(guess, array)
-            })
+                checkWinLose(guess, array)
+            }, {once: true})
         }
-    })
+    }, {once: true})
 }
 
 function showAlert(message, duration = 1000){
@@ -188,4 +189,25 @@ function pressKey(key)
 function getActiveTiles()
 {
     return guessGrid.querySelectorAll('[data-state="active"]')
+}
+
+function checkWinLose(guess, tiles){
+    if (guess == targetWord) {
+        showAlert("You Win", 5000)
+        danceTiles(tiles)
+        stopInteraction
+        return
+    }
+    
+}
+
+function danceTiles(tiles){
+    tiles.forEach((tile, index) => {
+        setTimeout(() => {
+            tile.classList.add("dance")
+            tile.addEventListener("animation", () => {
+                tile.classList.remove("dance")
+            }, {once: true})
+        }, index * DANCE_ANIMATION_DURATION / 5)
+    })
 }
