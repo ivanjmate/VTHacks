@@ -19,6 +19,7 @@ const dictionary =
 "advised",
 "adviser",
 "against",
+"agility",
 "airline",
 "airport",
 "alcohol",
@@ -214,14 +215,15 @@ function checkWinLose(guess, tiles){
     {
         stopInteraction()        
         resetGrid()
+        console.log(getActiveTiles.length)
         return    
     }
 }
 
 function resetGrid()
 {
-    console.log(getActiveTiles)
-    const tiles = getActiveTiles()
+    const tiles = guessGrid.querySelectorAll('[class="tile"]')
+    console.log(tiles.length)
     tiles.forEach((tile) => {
         tile.textContent = ""
         delete tile.dataset.state
