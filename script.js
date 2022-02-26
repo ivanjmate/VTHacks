@@ -1,9 +1,10 @@
 const targetWords = ["america", "google", "bread"]
 
-const targetWord = ""
 const guessGrid = document.querySelector("[data-guess-grid")
 const WORD_LENGTH = 7
 const targetWord = targetWords[0]
+
+startInteraction();
 
 function startInteraction() {
     document.addEventListener("click", handleMouseClick)
