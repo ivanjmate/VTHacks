@@ -337,4 +337,6 @@ function go()
         removeBox(count)
         count++
     }
+    let myElement = document.querySelector("#guess-grid");
+    document.getElementById("myDIV").style.gridTemplateColumns = "repeat(" + WORD_LENGTH + ", 4em)"
 }
