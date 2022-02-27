@@ -1,9 +1,23 @@
 const pictureLinks = [
     "images/JoeBiden_hidden.png",
     "images/ChrisHibble_hidden.png",
-    "images/Dominos_hidden.png"
+    "images/Dominos_hidden.png",
+    "images/astronaut_hidden.png",
+    "images/Avocado_hidden.png",
+    "images/CIA_hidden.png",
+    "images/crab_hidden.png",
+    "images/RyanReynolds_hidden.png"
 ]
-const targetWords = ["america", "google", "bread"]
+const targetWords = ["america",
+                     "google",
+                     "bread",
+                     "earth",
+                     "rotted",
+                     "first",
+                     "eaten",
+                     "hair"
+]
+
 const dictionary_array = 
 [[], [], [], [], 
 [
