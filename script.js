@@ -109,6 +109,7 @@ const rand = Math.floor(Math.random() * pictureLinks.length)
 console.log("" + rand)
 const img = document.createElement("img")
 img.src = pictureLinks[rand]
+img.classList.add("tweet-pic")
 var block = document.getElementById("pic")
 block.appendChild(img)
 
