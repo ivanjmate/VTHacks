@@ -8161,7 +8161,6 @@ function submitGuess()
     }
 
     stopInteraction()
-
     activeTiles.forEach((...params) => flipTiles(...params, guess))
 }
 
@@ -8212,7 +8211,7 @@ function showAlert(message, duration = 1000){
 function shakeTiles(tiles){
     tiles.forEach(tile => {
         tile.classList.add("shake")
-        tile.addEventListener("animation", () => {
+        tile.addEventListener("animationend", () => {
             tile.classList.remove("shake")
         }, {once: true})
     })
