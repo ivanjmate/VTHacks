@@ -4835,7 +4835,9 @@ const dictionary_array =
 "zesty",
 "zonal"
 ], 
-["abacus",
+[
+"rotted",
+"abacus",
 "abased",
 "abated",
 "abates",
