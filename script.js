@@ -98,6 +98,7 @@ img.src = pictureLinks[rand]
 var block = document.getElementById("pic")
 block.appendChild(img)
 
+window.addEventListener("load", go);
 
 const targetWord = targetWords[rand]
 const WORD_LENGTH = targetWords[rand].length
@@ -278,7 +279,6 @@ function checkWinLose(guess, tiles){
     {
         stopInteraction()        
         resetGrid()
-        console.log(getActiveTiles.length)
         return    
     }
 }
@@ -286,7 +286,6 @@ function checkWinLose(guess, tiles){
 function resetGrid()
 {
     const tiles = guessGrid.querySelectorAll('[class="tile"]')
-    console.log(tiles.length)
     tiles.forEach((tile) => {
         tile.textContent = ""
         delete tile.dataset.state
@@ -304,4 +303,24 @@ function danceTiles(tiles){
             }, {once: true})
         }, index * DANCE_ANIMATION_DURATION / 5)
     })
+}
+
+function removeBox(input)
+{
+    var el = document.getElementById('tile'+input)
+    el.remove()
+}
+
+function go()
+{
+    const tiles = guessGrid.querySelectorAll('[class="tile"]')
+    console.log(tiles.length)
+    const boxesToRemove = tiles.length - WORD_LENGTH
+    console.log(boxesToRemove)
+    var count = 0
+    while (count != boxesToRemove)
+    {
+        removeBox(count)
+        count++
+    }
 }
