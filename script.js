@@ -8258,7 +8258,7 @@ function getActiveTiles()
 
 function checkWinLose(guess, tiles){
     if (guess == targetWord) {
-        showAlert("Congratulations Ari", 5000)
+        showAlert("Congratulations Ari!!!", 5000)
         danceTiles(tiles)
         stopInteraction
         return        
