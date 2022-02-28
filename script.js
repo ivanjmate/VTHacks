@@ -12,8 +12,8 @@ const pictureLinks = [
     "images/Huts.png",
     "images/Louis.png",
     "images/Mario.png",
-    "images/Obama-four-more.png",
-    "images/Obama-tweet.png"
+    "images/Obama-Four-More.png",
+    "images/Obama-Tweet.png"
 ]
 const targetWords = ["america",
                      "google",
