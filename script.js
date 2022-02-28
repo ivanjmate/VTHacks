@@ -8,12 +8,12 @@ const pictureLinks = [
     "images/crab_hidden.png",
     "images/RyanReynolds_hidden.png",
     "images/consequences-of-actions.png",
-    "images/ellen.png",
-    "images/huts.png",
-    "images/louis.png",
-    "images/mario.png",
-    "images/obama-four-more.png",
-    "images/obama-tweet.png"
+    "images/Ellen.png",
+    "images/Huts.png",
+    "images/Louis.png",
+    "images/Mario.png",
+    "images/Obama-four-more.png",
+    "images/Obama-tweet.png"
 ]
 const targetWords = ["america",
                      "google",
