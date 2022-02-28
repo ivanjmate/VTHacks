@@ -6,7 +6,14 @@ const pictureLinks = [
     "images/Avocado_hidden.png",
     "images/CIA_hidden.png",
     "images/crab_hidden.png",
-    "images/RyanReynolds_hidden.png"
+    "images/RyanReynolds_hidden.png",
+    "images/consequences-of-actions.png",
+    "images/ellen.png",
+    "images/huts.png",
+    "images/louis.png",
+    "images/mario.png",
+    "images/obama-four-more.png",
+    "images/obama-tweet.png"
 ]
 const targetWords = ["america",
                      "google",
@@ -15,7 +22,15 @@ const targetWords = ["america",
                      "rotted",
                      "first",
                      "eaten",
-                     "hair"
+                     "hair",
+                     "actions",
+                     "longer",
+                     "huts",
+                     "heart",
+                     "mario",
+                     "years",
+                     "change"
+                     
 ]
 
 const dictionary_array = 
@@ -2519,7 +2534,9 @@ const dictionary_array =
 "zone",
 "zoom"
 ], 
-["venus",
+["years",
+"mario",
+"venus",
 "aback",
 "abase",
 "abate",
@@ -7339,7 +7356,9 @@ const dictionary_array =
 "zombie",
 "zoning"
 ],
-["ukraine",
+[
+"actions",
+"ukraine",
 "america",
 "ancient",
 "android",
