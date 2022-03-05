@@ -13,6 +13,33 @@ body{
     font-size: clamp(1rem, 2.5vmin, 1.5rem);
 }
 
+.header{
+    font-size: 1.25em;
+    text-align: center;
+    color: #1DA1F2;
+}
+.header h1{
+    margin-left: auto;
+    margin: 0;
+    margin-bottom: .25em;
+}
+
+a{
+    cursor: pointer;
+    color: #F5F8FA;
+    background-color: hsl(
+        var(--hue, 0),
+        var(--saturation, 0%),
+        calc(var(--lightness-offset, 0%) + var(--lightness, 60%))
+    );;
+    border-radius: .5em;
+    padding: .25em;
+}
+
+a:hover{
+    --lightness-offset: 10%;
+}
+
 .keyboard{
     display: grid;
     grid-template-columns: repeat(20, minmax(auto, 1em));
@@ -169,14 +196,6 @@ body{
     }
 }
 
-.header{
-    font-size: 1.25em;
-    text-align: center;
-    color: #1DA1F2;
-}
-.header h1{
-    margin: 0;
-}
 .tweet-pic{
     width: 55%;
     max-width: 100%;
